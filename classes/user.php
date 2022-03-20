@@ -1,7 +1,8 @@
-<!-- Classe gestione users -->
 <?php
 
 class User {
+
+    use Address;
 
     public $name;
     public $lastName;
@@ -32,6 +33,10 @@ class User {
 
     public function getDiscount() {
         return $this->discount;
+    }
+
+    public function setCreditCard($creditCard) {
+        $this->creditCard = $creditCard;
     }
 
 }

@@ -55,10 +55,8 @@ class CreditCard {
         $now = new DateTime();
 
         if ($expires < $now) {
-            return true;
+            throw new Exception('La carta di credito è scaduta!');
         }
-
-        return false;
 
     }
 
